@@ -20,7 +20,7 @@ function getRandomColor() {
 
 		// DOM element
 		this.el = element;
-		
+		 
 		// colors array
 		this.colors = colors;
 
