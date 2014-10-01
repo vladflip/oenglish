@@ -60,21 +60,22 @@ HTMLElement.prototype.setClass = function(ins, out){
 			this.contentDiv[1].innerHTML = this.words[rand(0, this.words.length-1)];
 
 			// this.el.style.backgroundColor = this.colors[rand(0, this.colors.length-1)];
-			this.pane[0].el.style.backgroundColor = getRandomColor();
-			this.pane[1].el.style.backgroundColor = getRandomColor();
-
-			setTimeout(function(){
-				self.pane[1].el.setClass('bottom',true);
-			},1000);
-
-			setTimeout(function(){
-				self.pane[0].el.setClass('center',true);
-				self.pane[1].el.setClass('center',true);
-			},rand(4,7)*1000);
+			this.el.style.backgroundColor = getRandomColor();
+			// this.pane[0].el.style.backgroundColor = getRandomColor();
+			// this.pane[1].el.style.backgroundColor = getRandomColor();
 
 			// setTimeout(function(){
-			// 	self.animate();
+			// 	self.pane[1].el.setClass('bottom',true);
+			// },1000);
+
+			// setTimeout(function(){
+			// 	self.pane[0].el.setClass('center',true);
+			// 	self.pane[1].el.setClass('center',true);
 			// },rand(4,7)*1000);
+
+			setTimeout(function(){
+				self.animate();
+			},200);
 		}
 	};
 
