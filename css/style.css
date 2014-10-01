@@ -4,6 +4,7 @@ body{
 
 .matrix{
 	position:absolute;
+	overflow: hidden;
 	top:0;
 	left:0;
 	right:0;
@@ -13,10 +14,62 @@ body{
 	width:20%;
 	height:20%;
 	float:left;
+	z-index:2;
+	overflow:hidden;
+	position:relative;
 
 	-webkit-transition: all .25s ease ;
 	   -moz-transition: all .25s ease ;
 	    -ms-transition: all .25s ease ;
 	     -o-transition: all .25s ease ;
 	        transition: all .25s ease ;
+}
+
+.pane{
+	position:absolute;
+	width:100%;
+	height:100%;
+	z-index:1;
+
+	-webkit-transition: all .6s ease ;
+	   -moz-transition: all .6s ease ;
+	    -ms-transition: all .6s ease ;
+	     -o-transition: all .6s ease ;
+	        transition: all .6s ease ;
+}
+
+.center{
+	-webkit-transform: translate(0,0);
+	   -moz-transform: translate(0,0);
+	    -ms-transform: translate(0,0);
+	     -o-transform: translate(0,0);
+	        transform: translate(0,0);
+}
+.left{
+	-webkit-transform: translate(100%,0);
+	   -moz-transform: translate(100%,0);
+	    -ms-transform: translate(100%,0);
+	     -o-transform: translate(100%,0);
+	        transform: translate(100%,0);
+}
+.right{
+	-webkit-transform: translate(-100%,0);
+	   -moz-transform: translate(-100%,0);
+	    -ms-transform: translate(-100%,0);
+	     -o-transform: translate(-100%,0);
+	        transform: translate(-100%,0);
+}
+.bottom{
+	-webkit-transform: translate(0,100%);
+	   -moz-transform: translate(0,100%);
+	    -ms-transform: translate(0,100%);
+	     -o-transform: translate(0,100%);
+	        transform: translate(0,100%);
+}
+.top{
+	-webkit-transform: translate(0,-100%);
+	   -moz-transform: translate(0,-100%);
+	    -ms-transform: translate(0,-100%);
+	     -o-transform: translate(0,-100%);
+	        transform: translate(0,-100%);
 }
