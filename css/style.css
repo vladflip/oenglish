@@ -84,3 +84,57 @@ body{
 	     -o-transform: translate(0,-100%);
 	        transform: translate(0,-100%);
 }
+
+
+/*brooklyn beta*/
+
+.welcome{
+	height:100%;
+	position:absolute;
+	color:rgb(70, 67, 58);
+	opacity: 1;
+	font-family: 'Droid Sans', sans-serif;
+	font-size: 5vw;
+	display:table-cell;
+	text-align: center;
+	width:100%;
+	z-index:999999;
+	background-color:rgb(222, 212, 185);
+
+	-webkit-transition: all 1s ease-out;
+	   -moz-transition: all 1s ease-out;
+	    -ms-transition: all 1s ease-out;
+	     -o-transition: all 1s ease-out;
+	        transition: all 1s ease-out;
+}
+.welcomecon{
+	margin-top:20%;
+}
+
+.eng{
+	color:rgb(100, 182, 177);
+	cursor:pointer;
+
+	-webkit-animation:blink .5s ease 0s infinite alternate;
+}
+
+@-webkit-keyframes blink {
+	0% { color:rgb(100, 182, 177); }
+	100% { color:rgb(140, 212, 207); }
+}
+@-moz-keyframes blink {
+	0% { color:rgb(100, 182, 177); }
+	100% { color:rgb(140, 212, 207); }
+}
+@-ms-keyframes blink {
+	0% { color:rgb(100, 182, 177); }
+	100% { color:rgb(140, 212, 207); }
+}
+@-o-keyframes blink {
+	0% { color:rgb(100, 182, 177); }
+	100% { color:rgb(140, 212, 207); }
+}
+@keyframes blink {
+	0% { color:rgb(100, 182, 177); }
+	100% { color:rgb(140, 212, 207); }
+}

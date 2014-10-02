@@ -33,6 +33,13 @@ HTMLElement.prototype.setClass = function(ins, out){
 
 	}
 
+var wel = document.getElementById('welcome');
+setTimeout(function(){
+	wel.style.opacity = 0;
+	setTimeout(function(){
+		wel.style.display = 'none';
+	},800)
+},3000);
 
 function callback(self,ap,apn,coords){
 	var apdiv = ap.getElementsByClassName('content')[0];
@@ -177,3 +184,4 @@ function callback(self,ap,apn,coords){
 
 	console.log(main.blocks);
 })();
+
