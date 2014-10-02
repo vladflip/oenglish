@@ -128,24 +128,6 @@ function callback(self,ap,apn,coords){
 
 			callback(self,ap,anp,coords);
 
-
-
-			// this.contentDiv[0].innerHTML = this.words[rand(0, this.words.length-1)];
-			// this.contentDiv[1].innerHTML = this.words[rand(0, this.words.length-1)];
-
-			// this.el.style.backgroundColor = this.colors[rand(0, this.colors.length-1)];
-			// this.el.style.backgroundColor = getRandomColor();
-			
-
-			// setTimeout(function(){
-			// 	self.pane[1].el.setClass('bottom',true);
-			// },1000);
-
-			// setTimeout(function(){
-			// 	p1.el.setClass(coords[rand(0,coords.length-1)],true);
-			// 	p2.el.setClass(coords[rand(0,coords.length-1)],true);
-			// },rand(4,7)*1000);
-
 			
 		}
 	};
