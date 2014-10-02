@@ -42,12 +42,11 @@ function callback(self,ap,apn,coords){
 	for(var i = 0; i<self.colors.length;i++)
 		self.colors[i] !== ap.style.backgroundColor ? colors.push(self.colors[i])
 														: null;
-		
+		console.log(colors);
 
 	apndiv.innerHTML = '';
-
+	apdiv.style.color = colors[rand(0, colors.length-1)];
 	setTimeout(function(){
-
 		apn.setClass(coords[rand(0,coords.length-1)],true);
 		apn.style.backgroundColor = colors[rand(0, colors.length-1)];
 		setTimeout(function(){
@@ -58,7 +57,6 @@ function callback(self,ap,apn,coords){
 	var i = 0;
 	var word = self.words[rand(0, self.words.length-1)];
 	var arr = word.split('');
-	console.log(arr);
 
 	setTimeout(function(){
 		var id = setInterval(function(){

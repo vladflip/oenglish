@@ -31,6 +31,7 @@ body{
 	font-size: 1.4vw;
 	display: table-cell;
 	vertical-align: bottom;
+	cursor:pointer;
 
 	-webkit-transition: all .7s ease-out;
 	   -moz-transition: all .7s ease-out;
@@ -41,6 +42,7 @@ body{
 .content{
 	position:absolute;
 	top:43%;
+	font-family: 'Droid Sans', sans-serif;
 	left:0;
 	text-align: center;
 	right:0;
