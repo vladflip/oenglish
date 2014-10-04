@@ -22,6 +22,15 @@ HTMLElement.prototype.setClass = function(ins, out){
 	this.className = clarr.join(' ') + ' ' + ins;
 }
 
+HTMLElement.prototype.delClassLast = function(){
+	var cl = this.className;
+	var clarr = cl.split(' ');
+
+	if(clarr.length>1) clarr = clarr.slice(0, clarr.length-1);
+	else if(clarr.length===1) clarr = clarr.slice(0, 1);
+
+	this.className = clarr.join(' ');
+}
 // PANE CLASS
 
 	function pane(el){
@@ -42,14 +51,22 @@ setTimeout(function(){
 },3000);
 
 function callback(self,ap,apn,coords){
+	if(self.el.className.indexOf('click')!==-1)
+		self.el.delClassLast();
+
 	var apdiv = ap.getElementsByClassName('content')[0];
 	var apndiv = apn.getElementsByClassName('content')[0];
 	var colors = [];
 
+	var word = self.words[rand(0, self.words.length-1)];
+	var arr = word.split('');
+
+	if(word==='OENGLISH')
+		self.el.setClass('click');
+
 	for(var i = 0; i<self.colors.length;i++)
 		self.colors[i] !== ap.style.backgroundColor ? colors.push(self.colors[i])
 														: null;
-		console.log(colors);
 
 	apndiv.innerHTML = '';
 	apdiv.style.color = colors[rand(0, colors.length-1)];
@@ -62,8 +79,9 @@ function callback(self,ap,apn,coords){
 	},1000);
 
 	var i = 0;
-	var word = self.words[rand(0, self.words.length-1)];
-	var arr = word.split('');
+	
+
+
 
 	setTimeout(function(){
 		var id = setInterval(function(){
@@ -83,8 +101,19 @@ function callback(self,ap,apn,coords){
 }
 
 // BLOCKS CLASS
+
+
+		var up = document.getElementById('catchf');
+				var down = document.getElementById('catchl');
+
+				up.className += ' bounceInDown animated';
+				down.className += ' bounceInUp animated';
+				var clickedcatch = false;
+				
+
 	function block(colors,words,element){
 		var self = this;
+
 
 		
 
@@ -114,7 +143,6 @@ function callback(self,ap,apn,coords){
 			this.pane[1].el.style.backgroundColor = this.colors[rand(0, this.colors.length-1)];
 
 		this.animate = function(func){
-
 			var ap, anp; // active pane, active next pane
 			var coords = this.pane[0].coords
 
@@ -136,6 +164,16 @@ function callback(self,ap,apn,coords){
 			callback(self,ap,anp,coords);
 
 			
+		}
+		this.clicked
+		this.el.onclick = function(){
+			if(self.el.className.indexOf('click')==-1&&!clickedcatch){
+				down.style.display = 'block';
+				up.style.display = 'block';
+				clickedcatch = true;
+			} else {
+				return false;
+			}
 		}
 	};
 
@@ -182,6 +220,13 @@ function callback(self,ap,apn,coords){
 
 	var main = new main();
 
-	console.log(main.blocks);
 })();
 
+// CATCH
+
++function(){
+	var up = document.getElementById('catchf');
+	var down = document.getElementById('catchl');
+
+	
+}();

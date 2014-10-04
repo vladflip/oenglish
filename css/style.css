@@ -2,6 +2,26 @@ body{
 	margin:0;
 }
 
+
+/*_______________________________CATCH*/
+
+.ct{
+
+	display:none;
+	background-color:rgb(222, 212, 185);
+	z-index:9999999999999;
+	position:absolute;
+	left:0;
+	right:0;
+	height:50%;
+}
+.catchf{
+	
+}
+.catchl{
+	top:50%;
+}
+/*_______________________________CATCH*/
 .matrix{
 	position:absolute;
 	overflow: hidden;
@@ -22,6 +42,12 @@ body{
 	    -ms-transition: all .25s ease ;
 	     -o-transition: all .25s ease ;
 	        transition: all .25s ease ;
+
+	        -webkit-user-select: none;
+	        -moz-user-select: none;
+	        -ms-user-select: none;
+	        -o-user-select: none;
+	        user-select: none;
 }
 
 .pane{
