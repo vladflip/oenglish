@@ -112,6 +112,8 @@ var catchBlock = (function(){
 	this.inputGroup = document.getElementById('inputGroup');
 	this.sendText = document.getElementById('sendText');
 	this.inputText = document.getElementById('inputText');
+	this.textBelow = document.getElementById('textBelow');
+	this.textAbove = document.getElementById('textAbove');
 
 	this.sendText.onclick = function(){
 		self.sendText.style.display = 'none';
@@ -185,7 +187,7 @@ var matrixIn = (function(){
 		}
 
 		this.el.onclick = function(){
-			if(self.el.className.indexOf('click')!==-1&&!clickedcatch){
+			if(self.el.className.indexOf('click')==-1&&!clickedcatch){
 				var h = document.documentElement.clientHeight;
 				
 				catchBlock.el.style.marginTop = '0';
@@ -194,6 +196,15 @@ var matrixIn = (function(){
 				setTimeout(function(){
 					catchBlock.btn.style.display = 'block';
 				},1000);
+
+				setTimeout(function(){
+					catchBlock.textAbove.style.display = 'block';
+				},2000);
+
+				setTimeout(function(){
+					catchBlock.textBelow.style.display = 'block';
+				},2500);
+
 
 
 			} else {

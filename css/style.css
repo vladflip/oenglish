@@ -17,7 +17,23 @@ body{
 	     -o-transition: margin 1s ease;
 	        transition: margin 1s ease;
 }
-
+.text-above,
+.text-below{
+	position:absolute;
+	color:rgb(100, 182, 177);
+	display:none;
+}
+.text-above{
+	top:-100px;
+	width:100%;
+	font-size: 50px;
+	text-align: center;
+}
+.text-below{
+	bottom:-40px;
+	width:100%;
+	text-align: center;
+}
 .send-mail{
 	width:480px;
 	margin:300px auto 0;
@@ -25,7 +41,7 @@ body{
 	position:relative;
 	font-family: 'Droid Sans', Corbel, sans-serif;
 	border:5px solid rgb(100, 182, 177);
-	overflow:hidden;
+	/*overflow:hidden;*/
 	height:60px;
 	display:none;
 
@@ -46,7 +62,7 @@ body{
 	cursor:pointer;
 	color:rgb(222, 212, 185);
 	background-color:rgb(100, 182, 177);
-	height:70px;
+	height:41px;
 }
 
 .input-group{
@@ -63,7 +79,7 @@ body{
 	padding:14px 7px 0 7px;
 	float:right;
 	text-align: center;
-	height:60px;
+	height:49px;
 	font-size: 30px;
 	background-color:rgb(100, 182, 177);
 	color:rgb(222, 212, 185);
