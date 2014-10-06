@@ -1,25 +1,86 @@
 body{
 	margin:0;
+	background-color:rgb(222, 212, 185);
 }
 
 
 /*_______________________________CATCH*/
 
-.ct{
+.catch{
 
-	display:none;
 	background-color:rgb(222, 212, 185);
-	z-index:9999999999999;
+	height:100%;
+	width:100%;
+	-webkit-transition: margin 1s ease;
+	   -moz-transition: margin 1s ease;
+	    -ms-transition: margin 1s ease;
+	     -o-transition: margin 1s ease;
+	        transition: margin 1s ease;
+}
+
+.send-mail{
+	width:480px;
+	margin:300px auto 0;
+	border-radius: 7px;
+	position:relative;
+	font-family: 'Droid Sans', Corbel, sans-serif;
+	border:5px solid rgb(100, 182, 177);
+	overflow:hidden;
+	height:60px;
+	display:none;
+
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+
+.sendtext{
+	letter-spacing: 2px;
 	position:absolute;
-	left:0;
-	right:0;
-	height:50%;
+	font-size: 30px;
+	padding:10px 0;
+	text-align: center;
+	width:100%;
+	cursor:pointer;
+	color:rgb(222, 212, 185);
+	background-color:rgb(100, 182, 177);
+	height:70px;
 }
-.catchf{
-	
+
+.input-group{
+	position:relative;
+	display:none;
 }
-.catchl{
-	top:50%;
+
+.input-text,
+.input-breaker{
+	float:left;
+}
+
+.input-addon{
+	padding:14px 7px 0 7px;
+	float:right;
+	text-align: center;
+	height:60px;
+	font-size: 30px;
+	background-color:rgb(100, 182, 177);
+	color:rgb(222, 212, 185);
+	cursor:pointer;
+}
+.input-breaker{
+	height:100%;
+	opacity:.6;
+}
+
+.input-text{
+	background-color:rgb(222, 212, 185);
+	outline:none;
+	font-size: 30px;
+	color:rgb(100, 182, 177);
+	padding:10px;
+	border:0;
 }
 /*_______________________________CATCH*/
 .matrix{
@@ -29,6 +90,16 @@ body{
 	left:0;
 	right:0;
 	bottom:0;
+}
+.matrix-in{
+	width:100%;
+	height:100%;
+
+	-webkit-transition: margin 1s ease;
+	   -moz-transition: margin 1s ease;
+	    -ms-transition: margin 1s ease;
+	     -o-transition: margin 1s ease;
+	        transition: margin 1s ease;
 }
 .col{
 	width:20%;
@@ -112,7 +183,7 @@ body{
 }
 
 
-/*brooklyn beta*/
+/*brooklyn beta color style*/
 
 .welcome{
 	height:100%;
@@ -142,6 +213,7 @@ body{
 	cursor:pointer;
 
 	-webkit-animation:blink .5s ease 0s infinite alternate;
+	animation:blink .5s ease 0s infinite alternate;
 }
 
 @-webkit-keyframes blink {

@@ -100,22 +100,40 @@ function callback(self,ap,apn,coords){
 	},800);
 }
 
+
+
+// CATCH BLOCK
+var catchBlock = (function(){
+	var self = this;
+
+	this.el =  document.getElementById('catch');
+	this.btn = document.getElementById('sendMail');
+	this.btn.className += ' rollIn animated';
+	this.inputGroup = document.getElementById('inputGroup');
+	this.sendText = document.getElementById('sendText');
+	this.inputText = document.getElementById('inputText');
+
+	this.sendText.onclick = function(){
+		self.sendText.style.display = 'none';
+		self.inputGroup.style.display = 'block';
+		self.inputText.focus();
+	}
+
+	return this;
+})();
+
+var matrixIn = (function(){
+	var el = document.getElementById('matrix');
+	return el;
+})();
+
 // BLOCKS CLASS
 
-
-		var up = document.getElementById('catchf');
-				var down = document.getElementById('catchl');
-
-				up.className += ' bounceInDown animated';
-				down.className += ' bounceInUp animated';
-				var clickedcatch = false;
 				
+				var clickedcatch = false;
 
 	function block(colors,words,element){
 		var self = this;
-
-
-		
 
 		// DOM element
 		this.el = element;
@@ -165,12 +183,19 @@ function callback(self,ap,apn,coords){
 
 			
 		}
-		this.clicked
+
 		this.el.onclick = function(){
 			if(self.el.className.indexOf('click')==-1&&!clickedcatch){
-				down.style.display = 'block';
-				up.style.display = 'block';
-				clickedcatch = true;
+				var h = document.documentElement.clientHeight;
+				
+				catchBlock.el.style.marginTop = '0';
+				matrixIn.style.marginTop = -h + 'px';
+
+				setTimeout(function(){
+					catchBlock.btn.style.display = 'block';
+				},1000);
+
+
 			} else {
 				return false;
 			}
@@ -221,12 +246,3 @@ function callback(self,ap,apn,coords){
 	var main = new main();
 
 })();
-
-// CATCH
-
-+function(){
-	var up = document.getElementById('catchf');
-	var down = document.getElementById('catchl');
-
-	
-}();
