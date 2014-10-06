@@ -187,7 +187,7 @@ var matrixIn = (function(){
 		}
 
 		this.el.onclick = function(){
-			if(self.el.className.indexOf('click')==-1&&!clickedcatch){
+			if(self.el.className.indexOf('click')!==-1&&!clickedcatch){
 				var h = document.documentElement.clientHeight;
 				
 				catchBlock.el.style.marginTop = '0';
